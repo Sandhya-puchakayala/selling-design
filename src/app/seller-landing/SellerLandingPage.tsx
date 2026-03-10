@@ -188,7 +188,7 @@ export default function SellerLandingPage() {
     {/* LEFT CONTENT */}
     <div className="w-full lg:w-[55%] py-16">
 
-      <h1 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold leading-[44px] lg:leading-[64px] text-text-dark mb-6">
+      <h1 className="text-[32px] sm:text-[42px] lg:text-[44px] xl:text-[52px] font-bold leading-[44px] lg:leading-[54px] xl:leading-[64px] text-text-dark mb-6">
         Reach Pet Lovers Nationwide and{" "}
         <span className="text-primary-background">Grow</span>{" "}
         Your Business with Ease
@@ -227,8 +227,7 @@ export default function SellerLandingPage() {
 </div>
 
 {/* BIG IMAGE — ABSOLUTE */}
-{/* BIG IMAGE — ABSOLUTE */}
-<div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[0%] w-[95%] h-[130%]">
+<div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-10%] xl:right-[0%] w-[90%] xl:w-[95%] h-[120%] xl:h-[130%] pointer-events-none">
 
   <Image
     src="/images/img_image_53.png"
@@ -277,7 +276,7 @@ export default function SellerLandingPage() {
     alt="Easy Onboarding"
     width={360}
     height={360}
-    className="object-contain w-[280px] sm:w-[320px] lg:w-[400px] h-auto"
+    className="object-contain w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] xl:max-w-[400px] h-auto"
   />
 </div>
 </div>
@@ -414,7 +413,7 @@ export default function SellerLandingPage() {
 
                   {/* Connector Line */}
                   {index < processSteps.length - 1 && (
-  <div className="hidden lg:block absolute top-[48px] left-full ml-2 w-[120px]">
+  <div className="hidden lg:block absolute top-[48px] left-[calc(100%+4px)] xl:left-full xl:ml-2 w-[70px] xl:w-[120px]">
     <Image
       src="/images/img_ellipse_79.png"
       alt="Connector"
@@ -447,7 +446,7 @@ export default function SellerLandingPage() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12">
             {/* Left Image */}
             <div className="w-full lg:w-[32%] flex justify-center lg:justify-start">
-              <div className="w-[200px] sm:w-[300px] lg:w-[454px] h-[280px] sm:h-[420px] lg:h-[670px]">
+              <div className="w-[200px] sm:w-[300px] lg:w-[340px] xl:w-[400px] 2xl:w-[454px] h-[280px] sm:h-[420px] lg:h-[500px] xl:h-[580px] 2xl:h-[670px]">
                 <Image
                   src="/images/img_image_70.png"
                   alt="Pet Business Owners"
@@ -459,7 +458,7 @@ export default function SellerLandingPage() {
             </div>
 
             {/* Right Content */}
-            <div className="w-full lg:w-[68%]">
+            <div className="w-full lg:w-[60%] xl:w-[64%]">
               <div className="mb-6 sm:mb-8 lg:mb-10">
                 <h2 className="text-[28px] sm:text-[32px] lg:text-9xl font-semibold leading-[34px] sm:leading-[38px] lg:leading-[47px] text-text-dark mb-3 sm:mb-4 lg:mb-[18px]">
                   Who can Sell?
@@ -504,17 +503,17 @@ export default function SellerLandingPage() {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] mb-8 sm:mb-12 lg:mb-[66px]">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-[40px] xl:gap-[72px] mb-8 sm:mb-12 lg:mb-[66px]">
             {/* Left Content */}
-            <div className="w-full lg:w-[66%]">
+            <div className="w-full lg:w-[55%] xl:w-[60%]">
               <p className="text-lg sm:text-2xl lg:text-7xl font-medium leading-[26px] sm:leading-[34px] lg:leading-[50px] text-text-dark">
                 At Petoty, we connect passionate pet brands with a rapidly expanding community of pet parents across India. With seamless onboarding, reliable logistics, and powerful visibility tools, we help sellers build trust, boost sales, and grow their business effortlessly.
               </p>
             </div>
 
             {/* Right Stats Grid */}
-            <div className="w-full lg:w-[34%]">
-              <div className="grid grid-cols-2 gap-4 lg:gap-x-[58px] lg:gap-y-[44px]">
+            <div className="w-full lg:w-[40%] xl:w-[35%]">
+              <div className="grid grid-cols-2 gap-4 lg:gap-x-[30px] xl:gap-x-[58px] lg:gap-y-[30px] xl:gap-y-[44px]">
                 {statistics.map((stat) => (
                   <div key={stat.id} className="text-center">
                     <div className="text-[32px] sm:text-[48px] lg:text-12xl font-semibold leading-[40px] sm:leading-[56px] lg:leading-[88px] text-text-green mb-1 sm:mb-2">
@@ -596,7 +595,7 @@ export default function SellerLandingPage() {
           {/* Category Grid */}
          {/* Category Box */}
 <div className="bg-accent-cream border border-primary-background rounded-3xl 
-                px-6 sm:px-10 lg:px-20 
+                px-6 sm:px-10 lg:px-8 xl:px-20 
                 py-10 sm:py-14 lg:py-16">
 
  
@@ -606,12 +605,12 @@ export default function SellerLandingPage() {
       <div className="mb-6 flex justify-center">
         
         <span className="
-  px-10 sm:px-12 lg:px-14
-  py-4 sm:py-5 lg:py-6
+  px-10 sm:px-12 lg:px-8 xl:px-14
+  py-4 sm:py-5 lg:py-4 xl:py-6
   rounded-full
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-3xl
   font-bold
   shadow-md
 ">
@@ -631,12 +630,12 @@ export default function SellerLandingPage() {
       <div className="mb-6 flex justify-center">
        
         <span className="
-  px-10 sm:px-12 lg:px-14
-  py-4 sm:py-5 lg:py-6
+  px-10 sm:px-12 lg:px-8 xl:px-14
+  py-4 sm:py-5 lg:py-4 xl:py-6
   rounded-full
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-3xl
   font-bold
   shadow-md
 ">
@@ -655,12 +654,12 @@ export default function SellerLandingPage() {
       <div className="mb-6 flex justify-center">
         
         <span className="
-  px-10 sm:px-12 lg:px-14
-  py-4 sm:py-5 lg:py-6
+  px-10 sm:px-12 lg:px-8 xl:px-14
+  py-4 sm:py-5 lg:py-4 xl:py-6
   rounded-full
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-3xl
   font-bold
   shadow-md
 ">
@@ -679,12 +678,12 @@ export default function SellerLandingPage() {
       <div className="mb-6 flex justify-center">
         
         <span className="
-  px-10 sm:px-12 lg:px-14
-  py-4 sm:py-5 lg:py-6
+  px-10 sm:px-12 lg:px-8 xl:px-14
+  py-4 sm:py-5 lg:py-4 xl:py-6
   rounded-full
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-3xl
   font-bold
   shadow-md
 ">
@@ -715,8 +714,8 @@ export default function SellerLandingPage() {
             </div>
 
             {/* Right Content */}
-            <div className="w-full lg:w-[58%] space-y-8 sm:space-y-10 lg:space-y-[50px]">
-              <p className="text-lg sm:text-2xl lg:text-7xl font-normal leading-[26px] sm:leading-[30px] lg:leading-[33px] text-accent-cream-light">
+            <div className="w-full lg:w-[58%] space-y-8 sm:space-y-10 lg:space-y-[30px] xl:space-y-[50px]">
+              <p className="text-lg sm:text-2xl lg:text-7xl font-normal leading-[26px] sm:leading-[30px] xl:leading-[33px] text-accent-cream-light">
                 At Petoty, we support you at every step of your selling journey, from onboarding to order fulfillment and growth.
               </p>
 
