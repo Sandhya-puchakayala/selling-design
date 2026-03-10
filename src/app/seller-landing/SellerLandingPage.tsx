@@ -1,10 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
- import Image from'next/image';
- import Link from'next/link';
- import Header from'../../components/common/Header';
- import Button from'../../components/ui/Button';
- import EditText from'../../components/ui/EditText';
+import Image from 'next/image';
+import Link from 'next/link';
+import Header from '../../components/common/Header';
+import Button from '../../components/ui/Button';
+import EditText from '../../components/ui/EditText';
 
 interface ProcessStep {
   id: number;
@@ -126,21 +126,21 @@ export default function SellerLandingPage() {
     "Health & Wellness",
     "Accessories"
   ];
-  
+
   const dogsItems = [
     "Food",
     "Treats & Chews",
     "Health & Wellness",
     "Accessories"
   ];
-  
+
   const birdsItems = [
     "Food & Feeding",
     "Cages",
     "Perches & Toys",
     "Health & Grooming"
   ];
-  
+
   const fishesItems = [
     "Filter & Media",
     "Accessories",
@@ -154,21 +154,22 @@ export default function SellerLandingPage() {
     number: number;
     name: string;
   }) => (
-    <div className="flex items-center bg-[#50083019] 
-                    rounded-xl px-4 py-3 
-                    hover:bg-[#50083030] 
-                    transition-all duration-300">
-      <div className="w-10 h-10 
+    <div className="flex items-center bg-[#50083015] 
+                    rounded-2xl
+                    p-[6px] xl:p-[10px] pr-4 xl:pr-6
+                    hover:bg-[#50083025] 
+                    transition-all duration-300 w-full">
+      <div className="w-[48px] h-[48px] xl:w-[56px] xl:h-[56px] 
                       bg-primary-background 
                       rounded-full 
                       flex items-center justify-center 
                       text-white font-semibold 
-                      text-lg 
-                      mr-4">
+                      text-xl xl:text-[26px] 
+                      mr-4 xl:mr-5 flex-shrink-0">
         {number}
       </div>
-  
-      <span className="text-base font-medium text-text-dark">
+
+      <span className="text-[17px] xl:text-[22px] font-medium text-text-dark leading-tight">
         {name}
       </span>
     </div>
@@ -180,66 +181,66 @@ export default function SellerLandingPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full bg-accent-cream overflow-hidden">
+      {/* <section className="relative w-full bg-accent-cream overflow-hidden"> */}
+      <section className="relative w-full bg-accent-cream overflow-hidden mt-8">
 
-<div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
-  <div className="min-h-[700px] flex items-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
+          <div className="min-h-[700px] flex items-center">
 
-    {/* LEFT CONTENT */}
-    <div className="w-full lg:w-[55%] py-16">
+            {/* LEFT CONTENT */}
+            <div className="w-full lg:w-[55%] py-16">
 
-      <h1 className="text-[32px] sm:text-[42px] lg:text-[44px] xl:text-[52px] font-bold leading-[44px] lg:leading-[54px] xl:leading-[64px] text-text-dark mb-6">
-        Reach Pet Lovers Nationwide and{" "}
-        <span className="text-primary-background">Grow</span>{" "}
-        Your Business with Ease
-      </h1>
+              <h1 className="text-[32px] sm:text-[42px] lg:text-[44px] xl:text-[52px] font-bold leading-[44px] lg:leading-[54px] xl:leading-[64px] text-text-dark mb-6">
+                Reach Pet Lovers Nationwide and{" "}
+                <span className="text-primary-background">Grow</span>{" "}
+                Your Business with Ease
+              </h1>
 
-      <p className="text-base sm:text-lg lg:text-xl text-text-overlay mb-10 max-w-[550px]">
-        Join Petoty's growing marketplace and start selling premium pet
-        products with full support in logistics, payments, and visibility.
-      </p>
+              <p className="text-base sm:text-lg lg:text-xl text-text-overlay mb-10 max-w-[550px]">
+                Join Petoty's growing marketplace and start selling premium pet
+                products with full support in logistics, payments, and visibility.
+              </p>
 
-      <button
-  onClick={handleStartSelling}
-  className="
-    bg-primary-background
-    text-white
-    text-xl lg:text-2xl
-    font-semibold
-    px-16 py-6
-    rounded-full
-    shadow-[0_15px_35px_rgba(129,9,85,0.35)]
-    hover:scale-105
-    hover:shadow-[0_20px_45px_rgba(129,9,85,0.45)]
-    active:scale-95
-    transition-all
-    duration-300
-    ease-in-out
-    w-fit
-  "
->
-  Start Selling
-</button>
+              <button
+                onClick={handleStartSelling}
+                className="
+bg-primary-background
+text-white
+text-xl lg:text-2xl
+font-semibold
+px-14 py-5
+rounded-[16px]
+border border-[#7A0A50]
+shadow-[0_6px_12px_rgba(0,0,0,0.15)]
+hover:shadow-[0_8px_16px_rgba(0,0,0,0.2)]
+transition-all
+duration-300
+ease-in-out
+w-fit
+"
+              >
+                Start Selling
+              </button>
 
-    </div>
+            </div>
 
-  </div>
-</div>
+          </div>
+        </div>
 
-{/* BIG IMAGE — ABSOLUTE */}
-<div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-10%] xl:right-[0%] w-[90%] xl:w-[95%] h-[120%] xl:h-[130%] pointer-events-none">
+        {/* BIG IMAGE — ABSOLUTE */}
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-10%] xl:right-[0%] w-[90%] xl:w-[95%] h-[120%] xl:h-[130%] pointer-events-none">
 
-  <Image
-    src="/images/img_image_53.png"
-    alt="Seller Success"
-    fill
-    priority
-    className="object-contain object-right"
-  />
+          <Image
+            src="/images/img_image_53.png"
+            alt="Seller Success"
+            fill
+            priority
+            className="object-contain object-right"
+          />
 
-</div>
+        </div>
 
-</section>
+      </section>
 
       {/* Why Sell With Petoty Section */}
       <section className="w-full bg-secondary-background py-12 sm:py-16 lg:py-[60px]">
@@ -249,131 +250,176 @@ export default function SellerLandingPage() {
               <span className="text-text-dark">Why </span>
               <span className="text-primary-background">Sell With Petoty?</span>
             </h2>
-            <p className="text-base sm:text-lg lg:text-3xl font-normal leading-[22px] sm:leading-[26px] lg:leading-7xl text-text-overlay max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-3xl font-normal leading-[22px] sm:leading-[26px] lg:leading-7xl text-text-overlay max-w-5xl mx-auto">
               Grow your pet business with a trusted marketplace built specifically for pet lovers and sellers.
             </p>
           </div>
 
           {/* Benefits Grid */}
-         {/* Benefits Grid - Bento Layout */}
-<div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Benefits Grid - Bento Layout */}
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-{/* 1️⃣ Easy Seller Onboarding (Big Left Card) */}
-<div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between lg:row-span-2">
+            {/* 1️⃣ Easy Seller Onboarding (Big Left Card) */}
+            <div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between lg:row-span-2">
 
-  <div>
-    <h3 className="text-2xl lg:text-3xl font-semibold text-text-dark mb-4">
-      Easy Seller Onboarding
-    </h3>
-    <p className="text-base text-text-overlay">
-      Register in minutes and kickstart your online journey effortlessly.
-    </p>
-  </div>
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl lg:text-3xl font-semibold text-text-dark pr-4">
+                    Easy Seller Onboarding
+                  </h3>
+                  <Image
+                    src="/images/Group 87.png"
+                    alt="Tick Mark"
+                    width={40}
+                    height={40}
+                    className="object-contain flex-shrink-0"
+                  />
+                </div>
+                <p className="text-base text-text-overlay">
+                  Register in minutes and kickstart your online journey effortlessly.
+                </p>
+              </div>
 
-  <div className="mt-6 flex justify-center">
-  <Image
-    src="/images/img_image_65.png"
-    alt="Easy Onboarding"
-    width={360}
-    height={360}
-    className="object-contain w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] xl:max-w-[400px] h-auto"
-  />
-</div>
-</div>
+              <div className="mt-6 flex justify-center">
+                <Image
+                  src="/images/img_image_65.png"
+                  alt="Easy Onboarding"
+                  width={360}
+                  height={360}
+                  className="object-contain w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] xl:max-w-[400px] h-auto"
+                />
+              </div>
+            </div>
 
-{/* 2️⃣ Large Customer Base */}
-<div className="bg-accent-lighter border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
+            {/* 2️⃣ Large Customer Base */}
+            <div className="bg-accent-lighter border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
 
-  <div>
-    <h3 className="text-2xl font-semibold text-text-dark mb-4">
-      Large Customer Base
-    </h3>
-    <p className="text-base text-text-overlay">
-      Tap into a fast-growing community of pet parents who shop regularly.
-    </p>
-  </div>
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-semibold text-text-dark pr-4">
+                    Large Customer Base
+                  </h3>
+                  <Image
+                    src="/images/Group 87.png"
+                    alt="Tick Mark"
+                    width={40}
+                    height={40}
+                    className="object-contain flex-shrink-0"
+                  />
+                </div>
+                <p className="text-base text-text-overlay">
+                  Tap into a fast-growing community of pet parents who shop regularly.
+                </p>
+              </div>
 
-  <div className="mt-6 flex justify-end">
-    <Image
-      src="/images/img_image_66.png"
-      alt="Customer Growth"
-      width={180}
-      height={160}
-      className="object-contain"
-    />
-  </div>
-</div>
+              <div className="mt-6 flex justify-end">
+                <Image
+                  src="/images/img_image_66.png"
+                  alt="Customer Growth"
+                  width={180}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-{/* 3️⃣ Secure Payments */}
-<div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
+            {/* 3️⃣ Secure Payments */}
+            <div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
 
-  <div>
-    <h3 className="text-2xl font-semibold text-text-dark mb-4">
-      Secure & Transparent Payments
-    </h3>
-    <p className="text-base text-text-overlay">
-      Automatic payouts with clear commission breakdowns.
-    </p>
-  </div>
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-semibold text-text-dark pr-4">
+                    Secure & Transparent Payments
+                  </h3>
+                  <Image
+                    src="/images/Group 87.png"
+                    alt="Tick Mark"
+                    width={40}
+                    height={40}
+                    className="object-contain flex-shrink-0"
+                  />
+                </div>
+                <p className="text-base text-text-overlay">
+                  Automatic payouts with clear commission breakdowns.
+                </p>
+              </div>
 
-  <div className="mt-6 flex justify-end">
-    <Image
-      src="/images/img_image_67.png"
-      alt="Payment Security"
-      width={200}
-      height={170}
-      className="object-contain"
-    />
-  </div>
-</div>
+              <div className="mt-6 flex justify-end">
+                <Image
+                  src="/images/img_image_67.png"
+                  alt="Payment Security"
+                  width={200}
+                  height={170}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-{/* 4️⃣ Logistics Support */}
-<div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
+            {/* 4️⃣ Logistics Support */}
+            <div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
 
-  <div>
-    <h3 className="text-2xl font-semibold text-text-dark mb-4">
-      Logistics & Delivery Support
-    </h3>
-    <p className="text-base text-text-overlay">
-      We help handle packaging, shipping, and returns, stress-free selling.
-    </p>
-  </div>
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-semibold text-text-dark pr-4">
+                    Logistics & Delivery Support
+                  </h3>
+                  <Image
+                    src="/images/Group 87.png"
+                    alt="Tick Mark"
+                    width={40}
+                    height={40}
+                    className="object-contain flex-shrink-0"
+                  />
+                </div>
+                <p className="text-base text-text-overlay">
+                  We help handle packaging, shipping, and returns, stress-free selling.
+                </p>
+              </div>
 
-  <div className="mt-6 flex justify-end">
-    <Image
-      src="/images/img_image_68.png"
-      alt="Logistics"
-      width={180}
-      height={160}
-      className="object-contain"
-    />
-  </div>
-</div>
+              <div className="mt-6 flex justify-end">
+                <Image
+                  src="/images/img_image_68.png"
+                  alt="Logistics"
+                  width={180}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-{/* 5️⃣ Zero Technical Hassle */}
-<div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
+            {/* 5️⃣ Zero Technical Hassle */}
+            <div className="bg-accent-light border border-border-accent rounded-4xl p-6 flex flex-col justify-between">
 
-  <div>
-    <h3 className="text-2xl font-semibold text-text-dark mb-4">
-      Zero Technical Hassle
-    </h3>
-    <p className="text-base text-text-overlay">
-      No coding or setup required, we manage the backend, you manage your business.
-    </p>
-  </div>
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-semibold text-text-dark pr-4">
+                    Zero Technical Hassle
+                  </h3>
+                  <Image
+                    src="/images/Group 87.png"
+                    alt="Tick Mark"
+                    width={40}
+                    height={40}
+                    className="object-contain flex-shrink-0"
+                  />
+                </div>
+                <p className="text-base text-text-overlay">
+                  No coding or setup required, we manage the backend, you manage your business.
+                </p>
+              </div>
 
-  <div className="mt-6 flex justify-end">
-    <Image
-      src="/images/img_image_69.png"
-      alt="Technical Support"
-      width={180}
-      height={160}
-      className="object-contain"
-    />
-  </div>
-</div>
+              <div className="mt-6 flex justify-end">
+                <Image
+                  src="/images/img_image_69.png"
+                  alt="Technical Support"
+                  width={180}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-</div>
+          </div>
         </div>
       </section>
 
@@ -413,16 +459,16 @@ export default function SellerLandingPage() {
 
                   {/* Connector Line */}
                   {index < processSteps.length - 1 && (
-  <div className="hidden lg:block absolute top-[48px] left-[calc(100%+4px)] xl:left-full xl:ml-2 w-[70px] xl:w-[120px]">
-    <Image
-      src="/images/img_ellipse_79.png"
-      alt="Connector"
-      width={120}
-      height={28}
-      className="w-full h-auto object-contain"
-    />
-  </div>
-)}
+                    <div className="hidden lg:block absolute top-[40px] left-1/2 w-full" style={{ transform: 'translateX(55px)' }}>
+                      <Image
+                        src={index === 1 ? "/images/Ellipse 82.png" : "/images/img_ellipse_79.png"}
+                        alt="Connector"
+                        width={120}
+                        height={28}
+                        className="w-[calc(100%-110px)] h-auto object-contain"
+                      />
+                    </div>
+                  )}
 
                   {/* Step Content */}
                   <div className="text-center max-w-[280px] sm:max-w-[300px] lg:max-w-[298px]">
@@ -498,7 +544,7 @@ export default function SellerLandingPage() {
               <span className="text-text-dark">Petoty at a </span>
               <span className="text-primary-background">Glance</span>
             </h2>
-            <p className="text-base sm:text-lg lg:text-3xl font-normal leading-[22px] sm:leading-[26px] lg:leading-7xl text-text-overlay max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-3xl font-normal leading-[22px] sm:leading-[26px] lg:leading-7xl text-text-overlay max-w-6xl mx-auto">
               Reach a fast-growing community of pet parents and scale your business with Petoty's trusted platform.
             </p>
           </div>
@@ -590,114 +636,118 @@ export default function SellerLandingPage() {
           </div>
 
           {/* Category Tabs */}
-         
+
 
           {/* Category Grid */}
-         {/* Category Box */}
-<div className="bg-accent-cream border border-primary-background rounded-3xl 
-                px-6 sm:px-10 lg:px-8 xl:px-20 
-                py-10 sm:py-14 lg:py-16">
+          {/* Category Box */}
+          <div className="bg-accent-cream border border-primary-background rounded-3xl 
+                px-6 sm:px-10 lg:px-8 xl:px-[40px] 
+                py-10 sm:py-14 lg:py-0 w-full max-w-[1320px] mx-auto lg:h-[560px] flex flex-col justify-center">
 
- 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-    {/* Cats */}
-    <div>
-      <div className="mb-6 flex justify-center">
-        
-        <span className="
-  px-10 sm:px-12 lg:px-8 xl:px-14
-  py-4 sm:py-5 lg:py-4 xl:py-6
-  rounded-full
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+              {/* Cats */}
+              <div>
+                <div className="mb-8 lg:mb-[36px] flex justify-center">
+
+                  <span className="
+  block w-full max-w-[180px] text-center
+  px-4 sm:px-6 lg:px-4 xl:px-6
+  py-3 sm:py-4 lg:py-3 xl:py-[18px]
+  rounded-xl lg:rounded-2xl
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-xl xl:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-[26px]
   font-bold
   shadow-md
 ">
-  Cats
-</span>
-         
-      </div>
-      <div className="space-y-4">
-        {catsItems.map((item, index) => (
-          <CategoryItem key={index} number={index + 1} name={item} />
-        ))}
-      </div>
-    </div>
+                    Cats
+                  </span>
 
-    {/* Dogs */}
-    <div>
-      <div className="mb-6 flex justify-center">
-       
-        <span className="
-  px-10 sm:px-12 lg:px-8 xl:px-14
-  py-4 sm:py-5 lg:py-4 xl:py-6
-  rounded-full
+                </div>
+                <div className="space-y-4 lg:space-y-5 xl:space-y-[22px]">
+                  {catsItems.map((item, index) => (
+                    <CategoryItem key={index} number={index + 1} name={item} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Dogs */}
+              <div>
+                <div className="mb-8 lg:mb-[36px] flex justify-center">
+
+                  <span className="
+  block w-full max-w-[180px] text-center
+  px-4 sm:px-6 lg:px-4 xl:px-6
+  py-3 sm:py-4 lg:py-3 xl:py-[18px]
+  rounded-xl lg:rounded-2xl
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-xl xl:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-[26px]
   font-bold
   shadow-md
 ">
-          Dogs
-        </span>
-      </div>
-      <div className="space-y-4">
-        {dogsItems.map((item, index) => (
-          <CategoryItem key={index} number={index + 1} name={item} />
-        ))}
-      </div>
-    </div>
+                    Dogs
+                  </span>
+                </div>
+                <div className="space-y-4 lg:space-y-5 xl:space-y-[22px]">
+                  {dogsItems.map((item, index) => (
+                    <CategoryItem key={index} number={index + 1} name={item} />
+                  ))}
+                </div>
+              </div>
 
-    {/* Birds */}
-    <div>
-      <div className="mb-6 flex justify-center">
-        
-        <span className="
-  px-10 sm:px-12 lg:px-8 xl:px-14
-  py-4 sm:py-5 lg:py-4 xl:py-6
-  rounded-full
+              {/* Birds */}
+              <div>
+                <div className="mb-8 lg:mb-[36px] flex justify-center">
+
+                  <span className="
+  block w-full max-w-[180px] text-center
+  px-4 sm:px-6 lg:px-4 xl:px-6
+  py-3 sm:py-4 lg:py-3 xl:py-[18px]
+  rounded-xl lg:rounded-2xl
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-xl xl:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-[26px]
   font-bold
   shadow-md
 ">
-          Birds
-        </span>
-      </div>
-      <div className="space-y-4">
-        {birdsItems.map((item, index) => (
-          <CategoryItem key={index} number={index + 1} name={item} />
-        ))}
-      </div>
-    </div>
+                    Birds
+                  </span>
+                </div>
+                <div className="space-y-4 lg:space-y-5 xl:space-y-[22px]">
+                  {birdsItems.map((item, index) => (
+                    <CategoryItem key={index} number={index + 1} name={item} />
+                  ))}
+                </div>
+              </div>
 
-    {/* Fishes */}
-    <div>
-      <div className="mb-6 flex justify-center">
-        
-        <span className="
-  px-10 sm:px-12 lg:px-8 xl:px-14
-  py-4 sm:py-5 lg:py-4 xl:py-6
-  rounded-full
+              {/* Fishes */}
+              <div>
+                <div className="mb-8 lg:mb-[36px] flex justify-center">
+
+                  <span className="
+  block w-full max-w-[180px] text-center
+  px-4 sm:px-6 lg:px-4 xl:px-6
+  py-3 sm:py-4 lg:py-3 xl:py-[18px]
+  rounded-xl lg:rounded-2xl
   bg-primary-background
   text-primary-foreground
-  text-xl sm:text-2xl lg:text-xl xl:text-3xl
+  text-xl sm:text-2xl lg:text-xl xl:text-[26px]
   font-bold
   shadow-md
 ">
-          Fishes
-        </span>
-      </div>
-      <div className="space-y-4">
-        {fishesItems.map((item, index) => (
-          <CategoryItem key={index} number={index + 1} name={item} />
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
+                    Fishes
+                  </span>
+                </div>
+                <div className="space-y-4 lg:space-y-5 xl:space-y-[22px]">
+                  {fishesItems.map((item, index) => (
+                    <CategoryItem key={index} number={index + 1} name={item} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -719,14 +769,14 @@ export default function SellerLandingPage() {
                 At Petoty, we support you at every step of your selling journey, from onboarding to order fulfillment and growth.
               </p>
 
-              <div className="flex items-start gap-4 lg:gap-4">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-[82px] flex-shrink-0">
+              <div className="flex items-center gap-4 lg:gap-6">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 flex-shrink-0">
                   <Image
                     src="/images/img_group.png"
                     alt="Support Team"
-                    width={80}
-                    height={82}
-                    className="w-full h-full"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
@@ -734,7 +784,7 @@ export default function SellerLandingPage() {
                   <p className="text-lg sm:text-2xl lg:text-7xl font-normal leading-[26px] sm:leading-[32px] lg:leading-[39px] text-accent-cream-light mb-2 sm:mb-3">
                     You can reach our support team at:
                   </p>
-                  <Link 
+                  <Link
                     href="mailto:seller@petoty.com"
                     className="text-lg sm:text-2xl lg:text-7xl font-normal leading-[26px] sm:leading-[32px] lg:leading-[39px] text-accent-cream-light underline hover:opacity-80 transition-opacity"
                   >
@@ -750,35 +800,35 @@ export default function SellerLandingPage() {
   w-[180px] sm:w-[240px] lg:w-[350px] 
   h-auto 
   hidden lg:block"
->
-  <Image
-    src="/images/img_union.png"
-    alt="Support Illustration"
-    width={350}
-    height={380}
-    className="w-full h-auto object-contain"
-  />
-</div>
+          >
+            <Image
+              src="/images/img_union.png"
+              alt="Support Illustration"
+              width={350}
+              height={380}
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      
+
       <footer
-  className="w-full bg-secondary-background border-t border-line-background bg-no-repeat bg-left-bottom"
-  style={{
-    backgroundImage: "url('/images/img_group_gray_900_58x58.png')",
-    backgroundSize: "380px",
-    backgroundPosition: "-60px 60%",
-  }}
->
-  <div className="w-full max-w-[1440px] mx-auto px-8 py-12">
-    <div className="flex flex-col lg:flex-row gap-10">
-      
-      {/* Left: Logo + Nav Columns */}
-      <div className="flex flex-1 gap-6 items-start">
-        {/* Logo */}
-        {/* <div className="w-[110px] flex-shrink-0">
+        className="w-full bg-secondary-background border-t border-line-background bg-no-repeat bg-left-bottom"
+        style={{
+          backgroundImage: "url('/images/img_group_gray_900_58x58.png')",
+          backgroundSize: "380px",
+          backgroundPosition: "-60px 60%",
+        }}
+      >
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 xl:px-16 py-16">
+          <div className="flex flex-col xl:flex-row justify-between gap-12 xl:gap-32">
+
+            {/* Left: Nav Columns */}
+            <div className="flex flex-1 items-start w-full">
+              {/* Logo */}
+              {/* <div className="w-[110px] flex-shrink-0">
           <Image
             src="/images/img_group_gray_900_58x58.png"
             alt="Petoty Footer Logo"
@@ -790,149 +840,154 @@ export default function SellerLandingPage() {
           />
         </div> */}
 
-        {/* Nav Columns */}
-        <div className="flex flex-1 flex-wrap gap-x-12 gap-y-8">
-          {/* Get to Know Us */}
-          <div className="space-y-4 min-w-[140px]">
-            <h3 className="text-xl font-bold text-text-secondary">Get to Know Us</h3>
-            <div className="space-y-3">
-              {["About Us", "News & Blog", "Careers", "Investors", "Contact Us"].map((item, i) => (
-                <Link key={i} href="#" className="block text-base font-normal text-text-secondary hover:text-primary-background transition-colors">
-                  {item}
-                </Link>
-              ))}
+              <div className="flex flex-1 justify-between flex-wrap gap-x-12 gap-y-10">
+                {/* Get to Know Us */}
+                <div className="space-y-5 min-w-[160px]">
+                  <h3 className="text-[22px] font-bold text-text-secondary tracking-wide">Get to Know Us</h3>
+                  <div className="space-y-4">
+                    {["About Us", "News & Blog", "Careers", "Investors", "Contact Us"].map((item, i) => (
+                      <Link key={i} href="#" className="block text-[17px] font-medium text-text-secondary hover:text-primary-background transition-colors">
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Customer Service */}
+                <div className="space-y-5 min-w-[180px]">
+                  <h3 className="text-[22px] font-bold text-text-secondary tracking-wide">Customer Service</h3>
+                  <div className="space-y-4">
+                    {["Help Center", "FAQ's", "Franchise", "Feedback", "Become a Vendor", "Payment Method"].map((item, i) => (
+                      <Link key={i} href="#" className="block text-[17px] font-medium text-text-secondary hover:text-primary-background transition-colors">
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Legal */}
+                <div className="space-y-5 min-w-[140px]">
+                  <h3 className="text-[22px] font-bold text-text-secondary tracking-wide">Legal</h3>
+                  <div className="space-y-4">
+                    {["Privacy Policy", "Terms of Use", "Legal", "Sitemap"].map((item, i) => (
+                      <Link key={i} href="#" className="block text-[17px] font-medium text-text-secondary hover:text-primary-background transition-colors">
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Orders & Returns */}
+                <div className="space-y-5 min-w-[200px]">
+                  <h3 className="text-[22px] font-bold text-text-secondary tracking-wide">Orders & Returns</h3>
+                  <div className="space-y-4">
+                    {["Track Order", "Shipping & Delivery", "Return & Exchange", "Price Match Guarantee"].map((item, i) => (
+                      <Link key={i} href="#" className="block text-[17px] font-medium text-text-secondary hover:text-primary-background transition-colors">
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Newsletter + Social */}
+            <div className="w-full xl:w-[480px] flex-shrink-0 space-y-6">
+              <div>
+                <h4 className="text-[22px] font-bold text-text-secondary mb-2 tracking-wide">Let's keep in touch</h4>
+                <p className="text-[17px] text-text-variants font-medium">Get recommendations, tips, updates and more.</p>
+              </div>
+
+
+              {/* Email Subscribe Section - Proper CTA Fix */}
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
+
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  value={email}
+                  onChange={handleEmailChange}
+                  className="
+      flex-1
+      w-full
+      h-[60px]
+      text-lg
+      font-normal
+      text-text-dark
+      bg-input-background
+      border border-border-primary
+      rounded-full
+      px-6
+      outline-none
+      focus:ring-2
+      focus:ring-primary-dark/30
+      transition-all
+    "
+                />
+
+                <button
+                  onClick={handleSubscribe}
+                  className="
+      bg-primary-dark
+      text-white
+      text-lg
+      font-semibold
+      px-8
+      h-[60px]
+      rounded-full
+      shadow-lg
+      hover:bg-primary-dark/90
+      hover:shadow-xl
+      hover:scale-105
+      active:scale-95
+      transition-all
+      duration-300
+      ease-in-out
+      whitespace-nowrap
+      min-w-[140px]
+    "
+                >
+                  Subscribe
+                </button>
+
+              </div>
+              {/* Social Icons */}
+              <div className="pt-2">
+                <h4 className="text-[17px] font-medium text-text-secondary mb-4">Stay Connected</h4>
+                <div className="flex items-center gap-6">
+                  {[
+                    { src: "/images/img_image (2).png", alt: "Twitter", w: 22, h: 22 },
+                    { src: "/images/img_image_14x14 (2).png", alt: "Facebook", w: 22, h: 22 },
+                    { src: "/images/img_image_10x14 (2).png", alt: "YouTube", w: 22, h: 22 },
+                    { src: "/images/img_image_1 (2).png", alt: "Instagram", w: 22, h: 22 },
+                    { src: "/images/img_image_2.png", alt: "WhatsApp", w: 22, h: 22 },
+                  ].map(({ src, alt, w, h }) => (
+                    <Link key={alt} href="#" className="hover:opacity-75 transition-opacity flex-shrink-0">
+                      <Image src={src} alt={alt} width={w} height={h} style={{ width: w, height: h, objectFit: 'contain' }} />
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Customer Service */}
-          <div className="space-y-4 min-w-[160px]">
-            <h3 className="text-xl font-bold text-text-secondary">Customer Service</h3>
-            <div className="space-y-3">
-              {["Help Center", "FAQ's", "Franchise", "Feedback", "Become a Vendor", "Payment Method"].map((item, i) => (
-                <Link key={i} href="#" className="block text-base font-normal text-text-secondary hover:text-primary-background transition-colors">
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Legal */}
-          <div className="space-y-4 min-w-[120px]">
-            <h3 className="text-xl font-bold text-text-secondary">Legal</h3>
-            <div className="space-y-3">
-              {["Privacy Policy", "Terms of Use", "Legal", "Sitemap"].map((item, i) => (
-                <Link key={i} href="#" className="block text-base font-normal text-text-secondary hover:text-primary-background transition-colors">
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Orders & Returns */}
-          <div className="space-y-4 min-w-[180px]">
-            <h3 className="text-xl font-bold text-text-secondary">Orders & Returns</h3>
-            <div className="space-y-3">
-              {["Track Order", "Shipping & Delivery", "Return & Exchange", "Price Match Guarantee"].map((item, i) => (
-                <Link key={i} href="#" className="block text-base font-normal text-text-secondary hover:text-primary-background transition-colors">
-                  {item}
-                </Link>
-              ))}
+          {/* Footer Bottom */}
+          <div className="border-t border-line-background mt-14 pt-8 pb-4">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+              <p className="text-[17px] text-[#6d6d6d] font-medium">Copyright © 2025 Petoty, All rights reserved.</p>
+              <div className="flex-shrink-0">
+                <Image
+                  src="/images/img_image_59.png"
+                  alt="Payment Methods"
+                  width={302}
+                  height={18}
+                  style={{ width: 302, height: 18, objectFit: 'contain' }}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Right: Newsletter + Social */}
-      <div className="w-full lg:w-[320px] flex-shrink-0 space-y-5">
-        <div>
-          <h4 className="text-xl font-bold text-text-secondary mb-1">Let's keep in touch</h4>
-          <p className="text-base text-text-variants">Get recommendations, tips, updates and more.</p>
-        </div>
-
-       
-       {/* Email Subscribe Section - Proper CTA Fix */}
-<div className="flex flex-col sm:flex-row gap-4 w-full items-stretch">
-
-<EditText
-  placeholder="Enter your email address"
-  value={email}
-  onChange={handleEmailChange}
-  text_font_size="text-base"
-  text_font_family="Inter"
-  text_font_weight="font-normal"
-  text_line_height="leading-base"
-  text_color="text-text-light"
-  fill_background_color="bg-input-background"
-  border_border="border border-border-primary"
-  border_border_radius="rounded-full"
-  padding="t=16px,r=20px,b=16px,l=20px"
-  containerClassName="flex-1 w-full"
-/>
-
-<button
-  onClick={handleSubscribe}
-  className="
-    bg-primary-dark
-    text-white
-    text-xl
-    font-semibold
-    px-10
-    py-4
-    rounded-full
-    shadow-lg
-    hover:bg-primary-dark/90
-    hover:shadow-xl
-    hover:scale-105
-    active:scale-95
-    transition-all
-    duration-300
-    ease-in-out
-    whitespace-nowrap
-    min-w-[200px]
-  "
->
-  Subscribe
-</button>
-
-</div>
-
-        {/* Social Icons */}
-        <div>
-          <h4 className="text-base font-normal text-text-secondary mb-3">Stay Connected</h4>
-          <div className="flex items-center gap-5">
-            {[
-              { src: "/images/img_image (2).png", alt: "Twitter", w: 22, h: 22 },
-              { src: "/images/img_image_14x14 (2).png", alt: "Facebook", w: 22, h: 22 },
-              { src: "/images/img_image_10x14 (2).png", alt: "YouTube", w: 22, h: 22 },
-              { src: "/images/img_image_1 (2).png", alt: "Instagram", w: 22, h: 22 },
-              { src: "/images/img_image_2.png", alt: "WhatsApp", w: 22, h: 22 },
-            ].map(({ src, alt, w, h }) => (
-              <Link key={alt} href="#" className="hover:opacity-75 transition-opacity flex-shrink-0">
-                <Image src={src} alt={alt} width={w} height={h} style={{ width: w, height: h, objectFit: 'contain' }} />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Footer Bottom */}
-    <div className="border-t border-line-background mt-10 pt-5">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-base text-text-muted">Copyright © 2025 Petoty, All rights reserved.</p>
-        <div className="flex-shrink-0">
-          <Image
-            src="/images/img_image_59.png"
-            alt="Payment Methods"
-            width={302}
-            height={18}
-            style={{ width: 302, height: 18, objectFit: 'contain' }}
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-    </main>
+      </footer>
+    </main >
   )
 }
